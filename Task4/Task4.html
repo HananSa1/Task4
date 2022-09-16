@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Note</title>
+<style>
+body {
+  margin: 0;
+  background: #1f2c2a;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 290px);
+  padding-top: 5px;
+  padding-left: 120px;
+  gap: 24px;
+}
+
+.note {
+  height: 290px;
+  box-sizing: border-box;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.15);
+  resize: none;
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+.add-note {
+  height: 290px;
+  border: none;
+  outline: none;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-size: 130px;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-note:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#toggle{
+    position: relative;
+    display: block;
+    margin-left: 82% ;
+
+    width: 70px ;
+    height: 30px;
+    border-radius: 160px;
+    background: #222;
+    transition: 0.5s;
+    cursor: pointer;
+    box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1),
+                inset 0 8px 8px rgba(0, 0, 0, 0.1),
+                inset 0 -4px 4px rgba(0, 0, 0, 0.1);
+}
+#toggle.active{
+    background: #fff;
+    box-shadow: inset 0 2px 60px rgba(0, 0, 0, 0.1),
+                inset 0 2px 8px rgba(0, 0, 0, 0.1),
+                inset 0 -4px 4px rgba(0, 0, 0, 0.05);
+}
+#toggle .indicator
+{
+position: absolute;
+top: 0;
+left: 0;
+width: 30px;
+height: 30px;
+background: linear-gradient(to bottom,#444,#222);
+border-radius: 50%;
+transform: scale(0.9);
+box-shadow: 0 8px 40px rgba(0,0,0,0.5),
+            inset 0 4px 4px rgba(255,255,255,0.2),
+            inset 0 -4px 4px rgba(255,255,255,0.2);
+transition:0.5s;
+}
+
+#toggle.active .indicator
+{
+  left: 40px;  
+  background: linear-gradient(to bottom,#eaeaea,#f9f9f9);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1),
+            inset 0 4px 4px rgba(255,255,255,1),
+            inset 0 -4px 4px rgba(255,255,255,1);
+}
+
+body.active{
+background: #b3f9ec;
+}
+h1{
+    color: #66dbc4
+}
+h1.active{
+    color: #1b302f;
+}
+
+
+    </style>
+  </head>
+
+  
+
+    <body>
+
+        <h1 style="text-align:center; margin-top: 25px; ">Note board    <div id="toggle" > <i class="indicator"></i> </div> </h1>
+        
+
+
+        <div id="app">
+            
+            <img src="1.Png" class="note">
+            <img src="3.Png" class="note">            
+            <img src="2.Png" class="note">            
+            <img src="4.Png" class="note">
+    
+
+            <button class="add-note" type="button">+</button>
+          </div>
+  
+          <script src="Note.js"></script>
+    </body>
+</html>
